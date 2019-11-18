@@ -60,3 +60,4 @@ function checkDiff(f,s){
 	let percent = t/(f.length+s.length)*100;
 	console.log(`Diff in percent: ${percent}`);
 }
+
