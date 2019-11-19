@@ -34,11 +34,11 @@ function showAnotherMessage(){
 //third task
 function divNum(arr){
 	for (let i = 0; i <= arr.length; i++) {
-		if (arr[i]%3==0 && arr[i]%7==0){
+		if (arr[i]%3===0 && arr[i]%7===0){
 			arr[i] = 'foobar';
-		}else if (arr[i]%7==0){
+		}else if (arr[i]%7===0){
 			arr[i] = 'bar';
-		} else if (arr[i]%3==0){
+		} else if (arr[i]%3===0){
 			arr[i] = 'foo';
 		}
 	}
@@ -46,18 +46,31 @@ function divNum(arr){
 }
 
 //fourth task
-function checkDiff(f,s){
-	let t = 0;
-	for (let i = 0; i < f.length; i++){
-		for (let j = 0; j < s.length; j++){
-			if(f[i]===s[j]){
-				t++;
-			}
-		}
-	}
-	console.log(`Number of matches: ${t}`);
-	console.log(`All letters: ${f.length+s.length}`)
-	let percent = t/(f.length+s.length)*100;
-	console.log(`Diff in percent: ${percent}`);
+function checkDiff(f,s) {
+    let t = 0;
+    for (let i = 0; i < f.length; i++) {
+        for (let j = 0; j < s.length; j++) {
+            if (f[i] === s[j]) {
+                t++;
+            }
+        }
+    }
+    console.log(`Number of matches: ${t}`);
+    console.log(`All letters: ${f.length + s.length}`);
+    let percent = t / (f.length + s.length) * 100;
+    console.log(`Diff in percent: ${percent}`);
 }
 
+let arrayExample = {
+	name: 'John',
+	job: 'FE dev',
+	sport: 'Ultimate',
+	activeLife: true,
+	sayHi: function() {
+		console.log(`Hello, ${this.name}!`)
+	}
+};
+
+arrayExample.name = 'Alex';
+console.log(arrayExample);
+arrayExample.sayHi();
